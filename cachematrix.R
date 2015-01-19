@@ -23,10 +23,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve takes as a parameter one of the special data structures produced by makeCacheMatrix and returns the inverse of its 
-## internally stored matrix.  It uses the data structure's internal functions to check whether or not the matrix has had its inverse 
-## previously computed.  If so, it invokes the 'getInverse' function in order to look up the matrix inverse instead of computing it; 
-## otherwise, the matrix inverse is computed, stored for future use, and returned.
+## cacheSolve takes as a parameter one of the special data structures produced by makeCacheMatrix and returns the inverse 
+## of its internally stored matrix.  It uses the data structure's internal functions to check whether or not the matrix 
+## has had its inverse previously computed.  If so, it invokes the 'getInverse' function in order to look up the matrix 
+## inverse instead of computing it; otherwise, the matrix inverse is computed, stored for future use, and returned.
 
 cacheSolve <- function(x, ...) {
   inv <- x$getInverse()
